@@ -1,0 +1,98 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+package-lock.json
+
+# Build output
+/.next/
+/.next-cli-build/
+/out/
+/build
+cli/.build-home/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+.kiro/steering/secrets.md
+.npmrc
+*.pem
+
+# IDE and OS files
+.idea/
+.vscode/
+.cursor/
+.DS_Store
+Thumbs.db
+
+# Logs and temp files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+dev.out.log
+nohup.out
+logs/*
+*.tmp
+*.temp
+
+# Test artifacts and debug scripts
+/coverage
+test-*.mjs
+solve-captcha.mjs
+.playwright-mcp/
+tests/__baseline__/current.json
+
+# Runtime database
+*.db
+data/
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Vercel
+.vercel
+.fakehome/
+
+# Generated tooling output
+/.kimchi/
+/.understand-anything/
+.graphifyignore
+graphify-out/*
+.next-analyze/*
+
+# Scratch docs and local notes
+plan.md
+OAUTH_*.md
+ZCODE_KNOWLEDGE.md
+PR/*
+RM.md
+RM.vn.md
+PUBLIC.md
+PUBLIC.en.md
+Thanks.md
+README1.md
+
+# Misc exclusions
+nul
+chrome/
+product
+source/*
+.bin/*
+test/*
+open-sse/test/*
+open-sse.old/
+ecosystem.config.*
+deploy*.sh
+scripts/agSniffer/*
+gitbooks/*
+gitbook/README.md
+.github/instructions/codacy.instructions.md
