@@ -1,0 +1,96 @@
+============================================================
+  SyferX - How To Use
+============================================================
+
+SyferX is your personal AI gateway. One local endpoint that
+routes to Claude, OpenAI, Gemini, and 40+ other providers.
+
+
+------------------------------------------------------------
+  OPTION 1 - THE EASY WAY (GUI)
+------------------------------------------------------------
+
+1. Right-click inside the SyferX folder and open PowerShell,
+   OR open PowerShell and run:
+
+       cd C:\Users\SyferX\Downloads\VansRouter-main\SyferXRouter
+       powershell -ExecutionPolicy Bypass -File .\GUI.ps1
+
+2. The SyferX Control Panel window opens. Click in order:
+
+       [ Install Requirements ]   <- first time only, wait for "OK"
+       [ Build ]                  <- first time only, wait for "OK"
+       [ START ]                  <- launches the server
+       [ Open Dashboard ]         <- opens it in your browser
+
+3. (Optional) Tick "Start SyferX automatically at Windows login"
+   if you want it to run every time your PC boots.
+
+4. To stop it later, just click [ STOP ].
+
+
+------------------------------------------------------------
+  OPTION 2 - TERMINAL (no GUI)
+------------------------------------------------------------
+
+   pnpm install        (first time only - installs everything)
+   pnpm run build       (first time only - builds the app)
+   pnpm run start       (starts the server)
+
+   Then open:  http://localhost:20127
+
+
+------------------------------------------------------------
+  LOGGING IN
+------------------------------------------------------------
+
+   URL:               http://localhost:20127
+   Dashboard:         http://localhost:20127/dashboard
+   Default password:  123456
+
+   Change your password in the dashboard after first login.
+
+
+------------------------------------------------------------
+  CONNECTING YOUR AI TOOLS
+------------------------------------------------------------
+
+Point any OpenAI-compatible tool (Claude Code, Codex, Cline,
+Cursor, etc.) to SyferX:
+
+   Base URL:   http://localhost:20127/v1
+   API Key:    create one in Dashboard -> Endpoint & Key
+
+Add your provider accounts in Dashboard -> Providers.
+
+
+------------------------------------------------------------
+  COMMON PROBLEMS
+------------------------------------------------------------
+
+* "running scripts is disabled on this system"
+      Run this once in PowerShell:
+      Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+
+* "pnpm is not recognized"
+      Install it once:  npm i -g pnpm
+
+* Port 20127 already in use
+      Click STOP in the GUI, or close the other program using it.
+
+* Page won't load
+      Make sure the status dot shows RUNNING (green) before
+      opening the dashboard. Give it ~5 seconds after START.
+
+
+------------------------------------------------------------
+  WHERE YOUR DATA LIVES
+------------------------------------------------------------
+
+   Windows:      %APPDATA%\9router\db\data.sqlite
+   macOS/Linux:  ~/.9router/db/data.sqlite
+
+Your keys and settings stay on your machine. Nothing is
+uploaded anywhere.
+
+============================================================
